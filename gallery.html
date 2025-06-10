@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - 일상세월</title>
+    <meta name="description" content="일상세월 갤러리 - 시간과 기억의 사진 모음">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 反轉顏色游標 -->
+    <div class="invert-cursor" id="cursor"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <!-- 手機版布局 -->
+        <div class="mobile-header">
+            <div class="mobile-title">
+                <a href="index.html" class="title-link">현재를 살아가다</a>
+            </div>
+            <nav class="mobile-nav">
+                <a href="gallery.html" class="nav-link active">GALLERY</a>
+                <a href="info.html" class="nav-link">INFO</a>
+                <button class="contact-btn" id="contactBtn">
+                    CONTANT
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+
+        <!-- 桌面版布局 -->
+        <div class="desktop-header">
+            <nav class="desktop-nav-left">
+                <a href="gallery.html" class="nav-link active">GALLERY</a>
+                <a href="info.html" class="nav-link">INFO</a>
+                <button class="contact-btn" id="contactBtnDesktop">
+                    CONTANT
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </button>
+            </nav>
+            <div class="desktop-title">
+                <a href="index.html" class="title-link">현재를 살아가다</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 聯絡資訊下拉選單 -->
+    <div class="contact-dropdown" id="contactDropdown">
+        <div class="contact-content">
+            <div class="contact-header">
+                <h2>연락처 정보</h2>
+                <button class="close-btn" id="closeBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="contact-grid">
+                <!-- 聯絡方式 -->
+                <div class="contact-section">
+                    <h3>연락 방법</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <p class="contact-label">이메일</p>
+                                <a href="mailto:contact@example.com" class="contact-link">tomaliu815@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <div>
+                                <p class="contact-label">전화번호</p>
+                                <a href="tel:+82-10-1234-5678" class="contact-link">+82-10-1234-5678</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <p class="contact-label">위치</p>
+                                <p class="contact-text">서울특별시, 대한민국</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 작업 문의 -->
+                <div class="contact-section">
+                    <h3>작업 문의</h3>
+                    <div class="work-inquiry">
+                        <p class="korean-text">
+                            사진 촬영, 전시 기획, 또는 협업에 관심이 있으시면 언제든지 연락해 주세요.
+                        </p>
+                        <div class="expertise">
+                            <p class="expertise-title">전문 분야:</p>
+                            <ul class="expertise-list">
+                                <li>• 일상 사진 촬영</li>
+                                <li>• 도시 풍경 사진</li>
+                                <li>• 개인 포트레이트</li>
+                                <li>• 전시 기획 및 큐레이션</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 소셜 미디어 -->
+            <div class="social-section">
+                <h3>소셜 미디어</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/_ryuuut__/" class="social-link">Instagram</a>
+                    <a href="https://www.behance.net/ryuuut" class="social-link">Behance</a>
+                    <a href="#" class="social-link">KakaoTalk</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景遮罩 -->
+    <div class="backdrop" id="backdrop"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- 頂部標題區域 -->
+        <div class="gallery-header fade-in-up" id="galleryHeader">
+            <h1 class="gallery-title">일상세월</h1>
+            <p class="gallery-description korean-text">
+                이것은 시간과 기억에 관한 사진 모음집입니다.
+"일상의 세월"을 주제로 세월의 빛과 그림자를 이야기합니다.
+            </p>
+        </div>
+
+        <!-- 第一個可拖動畫廊部分 -->
+        <div class="gallery-section fade-in-up" id="firstGallery">
+            <div class="gallery-container">
+                <h2 class="section-title">일상의 순간들</h2>
+                <div class="draggable-gallery" id="draggableGallery1">
+                    <!-- 8張圖片 -->
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 27.png" alt="Gallery Image 1">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 28.png" alt="Gallery Image 2">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 29.png" alt="Gallery Image 3">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 30.png" alt="Gallery Image 4">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 31.png" alt="Gallery Image 5">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 32.png" alt="Gallery Image 6">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 33.png" alt="Gallery Image 7">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 34.png" alt="Gallery Image 8">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 커뮤니티 산책 部分 -->
+        <div class="text-with-images-section fade-in-up" id="communitySection">
+            <div class="text-with-images-container">
+                <div class="text-content fade-in-up" id="textContent">
+                    <h2 class="content-title">커뮤니티 산책</h2>
+                    <p class="content-text korean-text">
+                        세상에 나가면 일상에 쫓기다 보면 우리를 둘러싼 아름다움을 놓치는 경우가 많습니다. 여행은 한 걸음 한 걸음이 새로운 발견이고 모든 장소가 작은 놀라움인 표현할 수 없는 모험과도 같습니다.
+                    </p>
+                </div>
+                <div class="images-content fade-in-up" id="imagesContent">
+                    <div class="content-image">
+                        <img src="image/Artboard 35.png">
+                    </div>
+                    <div class="content-image">
+                        <img src="image/Artboard 36.png" alt="Community Image 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二個可拖動畫廊部分 -->
+        <div class="gallery-section fade-in-up" id="secondGallery">
+            <div class="gallery-container">
+                <h2 class="section-title">푸른 하늘, 하얀 구름</h2>
+                <div class="draggable-gallery" id="draggableGallery2">
+                    <!-- 7張圖片 -->
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 37.png">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 38.png">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 39.png">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 40.png">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 41.png">
+                    </div>
+                    <div class="gallery-item hoverable" data-image="true">
+                        <img src="image/Artboard 42.png">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- 網格圖片畫廊部分 -->
+        <div class="grid-gallery-section fade-in-up" id="gridGallerySection">
+            <div class="grid-gallery-container">
+                <h2 class="section-title fade-in-up" id="gridTitle">기억의 조각들</h2>
+                <div class="grid-gallery stagger-children" id="gridGallery">
+                    <!-- 15張圖片 -->
+                    <div class="grid-item hoverable" data-image="true" data-index="0">
+                        <img src="image/Artboard 43.png" alt="Memory Image 1">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="1">
+                        <img src="image/Artboard 44.png" alt="Memory Image 2">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="2">
+                        <img src="image/Artboard 45.png" alt="Memory Image 3">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="3">
+                        <img src="image/Artboard 46.png" alt="Memory Image 4">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="4">
+                        <img src="image/Artboard 47.png" alt="Memory Image 5">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="5">
+                        <img src="image/Artboard 48.png" alt="Memory Image 6">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="6">
+                        <img src="image/Artboard 49.png" alt="Memory Image 7">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="7">
+                        <img src="image/Artboard 50.png" alt="Memory Image 8">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="8">
+                        <img src="image/Artboard 51.png" alt="Memory Image 9">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="9">
+                        <img src="image/Artboard 52.png" alt="Memory Image 10">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="10">
+                        <img src="image/Artboard 53.png" alt="Memory Image 11">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="11">
+                        <img src="image/Artboard 54.png" alt="Memory Image 12">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="12">
+                        <img src="image/Artboard 57.png" alt="Memory Image 13">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="13">
+                        <img src="image/Artboard 56.png" alt="Memory Image 14">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                    <div class="grid-item hoverable" data-image="true" data-index="14">
+                        <img src="image/Artboard 58.png">
+                        <div class="grid-overlay">
+                            <div class="grid-hint">클릭하여 확대</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 黑色底部區域 -->
+        <div class="footer-section fade-in-up" id="footerSection">
+            <div class="footer-content">
+                <h2 class="footer-title">歲月</h2>
+            </div>
+
+            <p class="footer-text korean-text">
+                광곡 시간의 지나감 이 이야기들은 소중한 개인적 역사로 살아남아 조용히 저만의 세월 이야기를 전할 것입니다. 또한
+                관객들의 마음속에 있는 비슷한 감정과 추억을 감동시켜 시간의 부드러움과 힘을 함께 느낄 수 있기를 바랍니다.
+            </p>
+
+            <div class="footer-keywords">
+                <span>날짜</span>
+                <span>수</span>
+                <span>장기록</span>
+                <span>바닷가</span>
+            </div>
+
+            <!-- 滿版底部圖片 -->
+            <div class="footer-image">
+                <img src="image/Artboard 60.png" alt="Footer Background">
+            </div>
+        </div>
+    </main>
+
+    <!-- 圖片預覽模態框 -->
+    <div class="image-modal" id="imageModal">
+        <button class="modal-close" id="modalClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+
+        <button class="modal-prev" id="modalPrev">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+        </button>
+
+        <button class="modal-next" id="modalNext">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
+        </button>
+
+        <div class="modal-content">
+            <img id="modalImage" src="/placeholder.svg" alt="">
+        </div>
+
+        <div class="modal-counter" id="modalCounter">
+            1 / 15
+        </div>
+
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

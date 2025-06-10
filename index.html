@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일상세월 - 互動式個人作品集</title>
+    <meta name="description" content="互動式個人作品集網站，展示日常生活的光影">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 反轉顏色游標 -->
+    <div class="invert-cursor" id="cursor"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <!-- 手機版布局 -->
+        <div class="mobile-header">
+            <div class="mobile-title">
+                <a href="index.html" class="title-link">현재를 살아가다</a>
+            </div>
+            <nav class="mobile-nav">
+                <a href="gallery.html" class="nav-link">GALLERY</a>
+                <a href="info.html" class="nav-link">INFO</a>
+                <button class="contact-btn" id="contactBtn">
+                    CONTANT
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+
+        <!-- 桌面版布局 -->
+        <div class="desktop-header">
+            <nav class="desktop-nav-left">
+                <a href="gallery.html" class="nav-link">GALLERY</a>
+                <a href="info.html" class="nav-link">INFO</a>
+                <button class="contact-btn" id="contactBtnDesktop">
+                    CONTANT
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </button>
+            </nav>
+            <div class="desktop-title">
+                <a href="index.html" class="title-link">현재를 살아가다</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 聯絡資訊下拉選單 -->
+    <div class="contact-dropdown" id="contactDropdown">
+        <div class="contact-content">
+            <div class="contact-header">
+                <h2>연락처 정보</h2>
+                <button class="close-btn" id="closeBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="contact-grid">
+                <!-- 聯絡方式 -->
+                <div class="contact-section">
+                    <h3>연락 방법</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <p class="contact-label">이메일</p>
+                                <a href="mailto:contact@example.com" class="contact-link">tomaliu815@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <div>
+                                <p class="contact-label">전화번호</p>
+                                <a href="tel:+82-10-1234-5678" class="contact-link">+82-10-1234-5678</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <p class="contact-label">위치</p>
+                                <p class="contact-text">서울특별시, 대한민국</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 작업 문의 -->
+                <div class="contact-section">
+                    <h3>작업 문의</h3>
+                    <div class="work-inquiry">
+                        <p class="korean-text">
+                            사진 촬영, 전시 기획, 또는 협업에 관심이 있으시면 언제든지 연락해 주세요.
+                        </p>
+                        <div class="expertise">
+                            <p class="expertise-title">전문 분야:</p>
+                            <ul class="expertise-list">
+                                <li>• 일상 사진 촬영</li>
+                                <li>• 도시 풍경 사진</li>
+                                <li>• 개인 포트레이트</li>
+                                <li>• 전시 기획 및 큐레이션</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 소셜 미디어 -->
+            <div class="social-section">
+                <h3>소셜 미디어</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/_ryuuut__/" class="social-link">Instagram</a>
+                    <a href="https://www.behance.net/ryuuut" class="social-link">Behance</a>
+                    <a href="#" class="social-link">KakaoTalk</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景遮罩 -->
+    <div class="backdrop" id="backdrop"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- 頂部背景圖片區域 -->
+        <div class="hero-section fade-in-up" id="heroSection">
+            <img src="image/Artboard 26.png" alt="Background" class="hero-image">
+            <div class="hero-overlay">
+              <p class="hero-text korean-text"> 日常<br>모든 사람의 인생은 아무리 평범해 보여도 마치 독특한 영화처럼 미세하고 진실한 순간들로 가득 차 있습니다. 카메라를 통해 이러한 일상의 빛과 그림자를 포착하여 시간의 흐름 속에 흩어져 있는 길광편의 깃털을 집어 영원한 영상으로 굳힙니다.  
+                
+                이곳에는 세상을 놀라게 할 장엄함은 없고, 가장 소박한 삶의 모습만 있습니다: 가족의 미소, 거리의 풍경, 사계절의 변화, 물건의 흔적. 각 사진은 시간의 조각으로, 현재의 감정, 추억 및 감회를 기록하고 있습니다. 세월이 흐르면서 이 영상들은 더 이상 단순한 그림이 아니라 소중한 개인 역사로 남아 조용히 저만의 세월 이야기를 전할 것입니다. 또한 관객들의 마음속에 있는 비슷한 감정과 추억을 감동시켜 시간의 부드러움과 힘을 함께 느낄 수 있기를 바랍니다. </p>
+          </div>
+        </div>
+
+        <!-- 중앙 제목 및 삼각형 -->
+        <div class="title-section fade-in-up" id="titleSection">
+            <h1 class="main-title">일상세월</h1>
+            <div class="triangle"></div>
+        </div>
+
+        <!-- 하단 텍스트 -->
+        <div class="description-section">
+            <p class="description-text korean-text fade-in-up" id="descriptionText">
+
+				이것은 시간과 기억에 관한 사진 모음집입니다.
+                <br>
+                "일상의 세월"을 주제로 세월의 빛과 그림자를 이야기합니다.
+            </p>
+        </div>
+
+        <!-- 黑色底部區域 - 歲月 -->
+        <div class="footer-section fade-in-up" id="footerSection">
+            <div class="footer-content">
+                <h2 class="footer-title">歲月</h2>
+            </div>
+
+            <p class="footer-text korean-text">
+                결국 시간이 지나면 이 이미지들은 소중한 개인의 역사로 승화되어 인터넷에서 조용히 내 시간의 이야기를 들려줄 것이고, 그 시간의 부드러움과 힘이 보는 이들의 마음에도 울림을 남길 수 있기를 바랍니다.
+            </p>
+
+            <div class="footer-keywords">
+                <span>날짜</span>
+                <span>수</span>
+                <span>장기록</span>
+                <span>바닷가</span>
+            </div>
+
+            <!-- 滿版底部圖片 -->
+            <div class="footer-image">
+                <img src="image/Artboard 60.png" alt="Footer Background">
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
