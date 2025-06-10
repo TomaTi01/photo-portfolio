@@ -347,7 +347,7 @@ select {
   color: white;
   font-size: 1.125rem;
   max-width: 65rem;
-position: absolute;
+
 }
 
 /* Title Section */
@@ -586,9 +586,9 @@ position: absolute;
 
 .footer-image {
   position: relative;
-  width: 100%;
   height: 300px;
   margin: 2rem -2rem -2rem;
+	
 }
 
 .footer-image img {
